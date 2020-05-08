@@ -10,7 +10,7 @@ You don't need to have deep understanding of OpenGL infrastructure to display an
 
 To display a simple sphere on scene you just need to write this code:
 
-
+For some reason when building you have to first build Core, then Constructor, then SceneGraph.
 ```
 
 using NetGL.Core.Mathematics;
