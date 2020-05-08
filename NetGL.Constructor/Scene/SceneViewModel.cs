@@ -381,8 +381,6 @@ namespace NetGL.Constructor.Scene {
         }
 
         private void AddParsedFbx() {
-            var importer = new FbxImporter();
-            importer.Load(_scene, "C:\\test.fbx");
 
         }
     }

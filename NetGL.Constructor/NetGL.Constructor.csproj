@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetGL.Constructor</RootNamespace>
     <AssemblyName>NetGL.Constructor</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -152,16 +152,6 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NetGL.Core\NetGL.Core.csproj">
-      <Project>{575971eb-b49a-40db-8ec9-452dae9bae25}</Project>
-      <Name>NetGL.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetGL.SceneGraph\NetGL.SceneGraph.csproj">
-      <Project>{955af21a-19b5-4284-85cc-c610681c0743}</Project>
-      <Name>NetGL.SceneGraph</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
@@ -530,6 +520,16 @@
     <Content Include="Resources\Textures\green.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetGL.Core\NetGL.Core.csproj">
+      <Project>{575971eb-b49a-40db-8ec9-452dae9bae25}</Project>
+      <Name>NetGL.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetGL.SceneGraph\NetGL.SceneGraph.csproj">
+      <Project>{955af21a-19b5-4284-85cc-c610681c0743}</Project>
+      <Name>NetGL.SceneGraph</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

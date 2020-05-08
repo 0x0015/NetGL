@@ -19,7 +19,7 @@ namespace NetGL.Constructor {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Shaders {
@@ -99,7 +99,7 @@ namespace NetGL.Constructor {
         ///	
         ///	// First corner
         ///	vec3 i  = floor(v + dot(v, C.yyy) );
-        ///	vec3 x0 [rest of string was truncated]&quot;;.
+        ///	vec3 x0 =   v - i + dot(i, C.xx [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Brokkoli_vert {
             get {
@@ -131,7 +131,9 @@ namespace NetGL.Constructor {
         ///	
         ///	if(gid &lt;= maxParticles){
         ///		particle part = p[gid];
-        ///		vec4 a, tem [rest of string was truncated]&quot;;.
+        ///		vec4 a, tempCurrPos;
+        ///		
+        ///		if(attPo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Dance_cs {
             get {

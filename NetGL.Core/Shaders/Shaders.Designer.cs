@@ -19,7 +19,7 @@ namespace NetGL.Core.Shaders {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Shaders {
@@ -171,7 +171,8 @@ namespace NetGL.Core.Shaders {
         ///		float attenuation = 1;
         ///		Light light = uniform_Light[i];
         ///
-        ///		if(ligh [rest of string was truncated]&quot;;.
+        ///		if(light.Type == 0) {
+        ///			attenu [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseColor_frag {
             get {
@@ -201,7 +202,9 @@ namespace NetGL.Core.Shaders {
         ///
         ///	vec3 n = normalize(uniform_NormalMatrix * in_Normal);
         ///	vec3 t = normalize(uniform_NormalMatrix * in_Tangent);
-        ///	vec3 b = cross(n, t);	        /// [rest of string was truncated]&quot;;.
+        ///	vec3 b = cross(n, t);	
+        /// 
+        ///	vertPosition = (un [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseNormal_vert {
             get {
@@ -231,7 +234,8 @@ namespace NetGL.Core.Shaders {
         ///	vec4 color = uniform_Color * texture(uniform_MainTexture, vertTexCoord);
         ///	vec3 diffuse = uniform_Ambient * color.xyz;	
         ///	vec4 specular = vec4(0);
-        /// [rest of string was truncated]&quot;;.
+        ///	
+        ///	vec3 normal = text [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseNormalTexture_frag {
             get {
@@ -263,7 +267,7 @@ namespace NetGL.Core.Shaders {
         ///    vertTexCoord = in_TexCoord;
         ///	vertPosition = (uniform_ModelViewMatrix * in_Position).xyz;	
         ///
-        ///	if(un [rest of string was truncated]&quot;;.
+        ///	if(uniform_LightCastingShado [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseShadow_vert {
             get {
@@ -294,7 +298,7 @@ namespace NetGL.Core.Shaders {
         ///		shadow = max(0.4, texture(uniform_ShadowTexture, shadowCoord));
         ///
         ///	vec4 color = uniform_Color;
-        ///	vec3 diffuse = un [rest of string was truncated]&quot;;.
+        ///	vec3 diffuse = uniform_Ambient * color. [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseShadowColor_frag {
             get {
@@ -324,7 +328,8 @@ namespace NetGL.Core.Shaders {
         ///	vec4 specular = vec4(0);
         ///
         ///	for(int i = 0; i &lt; uniform_LightCount; ++i)	{
-        ///		vec3 lightVec [rest of string was truncated]&quot;;.
+        ///		vec3 lightVec;
+        ///		float attenuation [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiffuseTexture_frag {
             get {
@@ -352,7 +357,8 @@ namespace NetGL.Core.Shaders {
         ///	if(factor &lt; uniform_DiscardFactor)
         ///		discard;
         ///
-        ///	vec4 texColor = texture(uniform_MainTexture, pass_Te [rest of string was truncated]&quot;;.
+        ///	vec4 texColor = texture(uniform_MainTexture, pass_TexCoord);
+        ///	frag_Colo [rest of string was truncated]&quot;;.
         /// </summary>
         public static string DiscardTexture_frag {
             get {

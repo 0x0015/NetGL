@@ -19,7 +19,7 @@ namespace NetGL.SceneGraph {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -83,7 +83,8 @@ namespace NetGL.SceneGraph {
         ///#if defined VERTEX_SHADER
         ///	in vec3 in_Position;	
         ///	in vec3 in_Normal;
-        ///	in vec4 in_ [rest of string was truncated]&quot;;.
+        ///	in vec4 in_Color;
+        ///	in vec3 in_Tan [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Deferred_1pass {
             get {
@@ -117,7 +118,9 @@ namespace NetGL.SceneGraph {
         ///		vec3 uniform_CameraPosition;
         ///		int _offset0;
         ///		vec3 uniform_Ambient;
-        ///		int _offset1; [rest of string was truncated]&quot;;.
+        ///		int _offset1;	
+        ///		
+        ///		int uniform_LightC [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Deferred_2pass {
             get {
@@ -149,7 +152,8 @@ namespace NetGL.SceneGraph {
         ///	#if defined USE_LIGHTING
         ///		int uniform_LightCount;
         ///		int uniform_LightCastingShadowNumber;	
-        ///		Light uniform_ [rest of string was truncated]&quot;;.
+        ///		Light uniform_Light[MAX_LIGHTS];
+        ///	#en [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Forward {
             get {
@@ -182,7 +186,7 @@ namespace NetGL.SceneGraph {
         ///	vec4 data3[];
         ///};
         ///
-        ///layout (local_ [rest of string was truncated]&quot;;.
+        ///layout (local_size_x = 256, local_size [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Particles_comp {
             get {
@@ -231,7 +235,8 @@ namespace NetGL.SceneGraph {
         ///
         ///	float sin = sin(in_Data1.y);
         ///	float cos = cos(in_Data1.y);
-        ///	rotation = mat3(cos, -sin, 0.0, sin, cos, 0.0, (1.0 - cos - sin) * 0.5, (1.0 + sin - cos) * 0.5, 1. [rest of string was truncated]&quot;;.
+        ///	rotation = mat3(cos, -sin, 0.0, sin, cos, 0.0, (1.0 - cos - sin) * 0.5, (1.0 + sin - cos) * 0.5, 1.0);
+        ///}.
         /// </summary>
         public static string Particles_vert {
             get {
@@ -268,7 +273,7 @@ namespace NetGL.SceneGraph {
         ///	vec2 position = in_vertices[gl_VertexID] * size + position;
         ///	gl_Position = vec4(position * 2.0 - vec2(1.0), 0.0, 1.0);
         ///	
-        ///	tex [rest of string was truncated]&quot;;.
+        ///	texcoords = in_texcoords[gl_Ver [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Quad {
             get {
@@ -292,7 +297,8 @@ namespace NetGL.SceneGraph {
         ///	fragment_info result;
         ///
         ///	result.emission = uniform_Reflectivity * texture(uniform_ReflectionTexture, reflectedDirection).xyz + uniform_Emission;
-        ///	result.normal [rest of string was truncated]&quot;;.
+        ///	result.normal = normal;
+        ///	res [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ReflectionDiffuseColorFragment {
             get {
@@ -315,7 +321,7 @@ namespace NetGL.SceneGraph {
         ///
         ///	result.emission = uniform_Rim * pow (rim, uniform_RimPower) + uniform_Emission;
         ///	result.normal = normal;
-        ///	result.albedo = uniform_Color * te [rest of string was truncated]&quot;;.
+        ///	result.albedo = uniform_Color * texture(uniform_ [rest of string was truncated]&quot;;.
         /// </summary>
         public static string RimDiffuseTextureColorFragment {
             get {
@@ -340,7 +346,7 @@ namespace NetGL.SceneGraph {
         ///fragment_info getFragment() {
         ///	vec3 normal = normalize(frag_in.normal);	
         ///	vec3 reflectedDirection = reflect(normalize(viewDir), normalize(normalDir));
-        ///	float rim = 1.0 - cla [rest of string was truncated]&quot;;.
+        ///	float rim = 1.0 - clamp(dot(-normaliz [rest of string was truncated]&quot;;.
         /// </summary>
         public static string RimReflectionDiffuseTextureColorFragment {
             get {
@@ -368,7 +374,8 @@ namespace NetGL.SceneGraph {
         ///#endif
         ///
         ///#ifdef FlatTextureColor
-        ///uniform vec4 uniform_Color = vec4(1 [rest of string was truncated]&quot;;.
+        ///uniform vec4 uniform_Color = vec4(1.0);
+        ///uniform sample [rest of string was truncated]&quot;;.
         /// </summary>
         public static string StandardShaders {
             get {
@@ -405,7 +412,7 @@ namespace NetGL.SceneGraph {
         ///void main(void)
         ///{
         ///	vec2 position = (in_vertices[gl_VertexID] * size + position) / viewport_size;
-        ///	gl_Positi [rest of string was truncated]&quot;;.
+        ///	gl_Position = vec4(position * 2.0 - v [rest of string was truncated]&quot;;.
         /// </summary>
         public static string UI {
             get {

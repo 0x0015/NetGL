@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetGL.SceneGraph</RootNamespace>
     <AssemblyName>NetGL.SceneGraph</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -131,7 +131,6 @@
     <Compile Include="Control\INetGLControl.cs" />
     <Compile Include="Control\PinvokeRenderTimer.cs" />
     <Compile Include="Control\RenderTimer.cs" />
-    <Compile Include="Import\FbxImporter.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="OpenGL\DeferredRender.cs" />
     <Compile Include="OpenGL\ForwardRender.cs" />
@@ -209,9 +208,6 @@
     <None Include="Resources\Deferred.1pass.glsl" />
     <None Include="Resources\StandardShaders.glsl" />
     <None Include="Resources\Forward.glsl" />
-    <Content Include="FbxConverter.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Particles.comp.txt" />
     <Content Include="Resources\Particles.frag.txt" />
     <Content Include="Resources\Particles.vert.txt" />
@@ -219,10 +215,6 @@
     <None Include="Resources\UI.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FbxImportTypes\FbxConverterTypes.csproj">
-      <Project>{b390c2fe-4541-4841-9729-028cff920b0c}</Project>
-      <Name>FbxConverterTypes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NetGL.Core\NetGL.Core.csproj">
       <Project>{575971eb-b49a-40db-8ec9-452dae9bae25}</Project>
       <Name>NetGL.Core</Name>
@@ -241,7 +233,8 @@
     </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>copy /Y "$(SolutionDir)Lib\FbxConverter.dll" "$(TargetDir)FbxConverter.dll"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
